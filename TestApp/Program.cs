@@ -36,7 +36,7 @@ namespace TestApp
             }
 
                 
-            var sortedWordCount = wordCount.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+            var sortedWordCount = wordCount.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
             using (StreamWriter writer = new StreamWriter(outputFile))
             {
                 foreach (var word in sortedWordCount)
